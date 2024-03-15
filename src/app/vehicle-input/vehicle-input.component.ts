@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgForm, FormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
@@ -10,6 +10,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
+
 
 import {Vehicle} from './../vehicle';
 
@@ -27,7 +28,8 @@ import {Vehicle} from './../vehicle';
             FormsModule,
             MatCardModule,
             MatCheckboxModule,
-            MatRadioModule],
+            MatRadioModule
+           ]
 })
 export class VehicleInputComponent {
 
@@ -44,6 +46,10 @@ export class VehicleInputComponent {
     ).subscribe(data => {
       this.newDataEvent.emit(data);
       });
+  }
+
+  reloadPage(){
+  window.location.reload();
   }
 
 

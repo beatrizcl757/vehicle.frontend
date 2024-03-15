@@ -1,6 +1,5 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
- import { CommonModule } from '@angular/common';
-
+import { Component, Input, Output, EventEmitter, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { VehicleDisplayComponent } from './../vehicle-display/vehicle-display.component';
 import { VehicleEditComponent } from './../vehicle-edit/vehicle-edit.component';
 
